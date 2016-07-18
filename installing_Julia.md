@@ -1,4 +1,4 @@
-# 
+# Julia installation guide
 
 ## Timestamp of this document
 * Created: 160718 (yymmdd)
