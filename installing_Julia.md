@@ -61,3 +61,9 @@ Pkg.build("ParallelAccelerator")        # Build the C++ runtime component of the
 Pkg.test("CompilerTools")               # Run CompilerTools tests.
 Pkg.test("ParallelAccelerator")         # Run ParallelAccelerator tests.
 ```
+
+### 4) [Speeding up package load time via userimg.jl](http://parallelacceleratorjl.readthedocs.io/en/latest/compiletime.html)
+```Julia
+importall ParallelAccelerator
+ParallelAccelerator.embed()
+```
