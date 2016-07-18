@@ -19,16 +19,28 @@ https://github.com/JuliaLang/julia/blob/master/README.md
 
 ## Steps
 
-1) Install "[Required Build Tools and External Libraries](https://github.com/JuliaLang/julia/blob/master/README.md#required-build-tools-and-external-libraries)"
+### 1) Install "[Required Build Tools and External Libraries](https://github.com/JuliaLang/julia/blob/master/README.md#required-build-tools-and-external-libraries)"
 ```
+# apt-get update
 # apt-get install vim build-essential gfortran perl wget curl m4 patch cmake openssl \
-libopenblas-dev libopenblas-base
+libopenblas-dev libopenblas-base git
 ```
 
-2) [Source Download and Compilation](https://github.com/JuliaLang/julia/blob/master/README.md#source-download-and-compilation)
+### 2) [Source Download and Compilation](https://github.com/JuliaLang/julia/blob/master/README.md#source-download-and-compilation)
 ```Shell
 ~$ git clone git://github.com/JuliaLang/julia.git
 ~$ cd julia
 ~/julia$ git checkout release-0.4
+~/julia$ make -j 8 # perform a parallel build
+```
+
+### 2-1) [General troubleshooting](https://github.com/JuliaLang/julia/blob/master/README.md#general-troubleshooting)
+* Try `make clean` and `make -j 8` again.
+* If above is not enough, try `make cleanall` and `make -j 8` again.
+
+### 2-2) [Updating an existing source tree](https://github.com/JuliaLang/julia/blob/master/README.md#updating-an-existing-source-tree) (when you want to update Julia)
+```Shell
+~$ cd julia
+~/julia$ git pull
 ~/julia$ make -j 8 # perform a parallel build
 ```
