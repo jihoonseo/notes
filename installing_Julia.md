@@ -62,6 +62,16 @@ Pkg.test("CompilerTools")               # Run CompilerTools tests.
 Pkg.test("ParallelAccelerator")         # Run ParallelAccelerator tests.
 ```
 
+### 3-1) [Updating `ParallelAccelerator.jl`](http://parallelacceleratorjl.readthedocs.io/en/latest/install.html) (when you want to update `ParallelAccelerator.jl`)
+At the `julia>` prompt, run these commands:
+```Julia
+Pkg.checkout("ParallelAccelerator")     # Switch to master branch
+Pkg.checkout("CompilerTools")           # Switch to master branch
+Pkg.build("ParallelAccelerator")        # Build the C++ runtime component of the package.
+Pkg.test("CompilerTools")               # Run CompilerTools tests.
+Pkg.test("ParallelAccelerator")         # Run ParallelAccelerator tests.
+```
+
 ### 4) [Speeding up package load time via userimg.jl](http://parallelacceleratorjl.readthedocs.io/en/latest/compiletime.html)
 ```Julia
 importall ParallelAccelerator
