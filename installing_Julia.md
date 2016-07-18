@@ -34,17 +34,24 @@ libopenblas-dev libopenblas-base git
 ~/julia$ make -j 8 # perform a parallel build
 ```
 
+### 2-1) add Julia executable or Julia directory to `$PATH`
 * add a soft link to the `julia` executable in the `julia` directory to `/usr/local/bin` (or any suitable directory already in your path)
 ```
 # cd /usr/local/bin
 # ln -s /home/jhseo/julia/usr/bin/julia ./
 ```
+* If you cannot use Atom with above method (adding a soft link), try this:
+ * append this line in `.bashrc` (or `.bash_profile`) which is located in your home directory:
+```
+export PATH="$PATH:/home/jhseo/julia"
+```
+* and reboot to apply.
 
-### 2-1) [General troubleshooting](https://github.com/JuliaLang/julia/blob/master/README.md#general-troubleshooting)
+### 2-2) [General troubleshooting](https://github.com/JuliaLang/julia/blob/master/README.md#general-troubleshooting)
 * Try `make clean` and `make -j 8` again.
 * If above is not enough, try `make cleanall` and `make -j 8` again.
 
-### 2-2) [Updating an existing source tree](https://github.com/JuliaLang/julia/blob/master/README.md#updating-an-existing-source-tree) (when you want to update Julia)
+### 2-3) [Updating an existing source tree](https://github.com/JuliaLang/julia/blob/master/README.md#updating-an-existing-source-tree) (when you want to update Julia)
 ```Shell
 ~$ cd julia
 ~/julia$ git pull
