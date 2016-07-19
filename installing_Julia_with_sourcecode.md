@@ -20,9 +20,10 @@ https://github.com/JuliaLang/julia/blob/master/README.md
 ## Steps
 
 ### 1) Install "[Required Build Tools and External Libraries](https://github.com/JuliaLang/julia/blob/master/README.md#required-build-tools-and-external-libraries)"
-```
-# apt-get update
-# apt-get install vim build-essential gfortran perl wget curl m4 patch cmake openssl \
+```Shell
+#
+apt-get update
+apt-get install vim build-essential gfortran perl wget curl m4 patch cmake openssl \
 libopenblas-dev libopenblas-base git
 ```
 
@@ -38,7 +39,7 @@ libopenblas-dev libopenblas-base git
 * add a soft link to the `julia` executable in the `julia` directory to `/usr/local/bin` (or any suitable directory already in your path)
 ```
 # cd /usr/local/bin
-# ln -s /home/jhseo/julia/usr/bin/julia ./
+# ln -s /home/jhseo/julia/julia ./
 ```
 * If you cannot use Atom with above method (adding a soft link), try this:
  * append this line in `.bashrc` (or `.bash_profile`) which is located in your home directory:
