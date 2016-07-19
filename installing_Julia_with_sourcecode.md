@@ -2,7 +2,7 @@
 
 ## Timestamp of this document
 * Created: 160718 (yymmdd)
-* Last update: 160718 (yymmdd)
+* Last update: 160719 (yymmdd)
 
 ## Environment
 * Ubuntu 16.04 desktop
@@ -51,6 +51,11 @@ export PATH="$PATH:/home/jhseo/julia"
 ### 2-2) [General troubleshooting](https://github.com/JuliaLang/julia/blob/master/README.md#general-troubleshooting)
 * Try `make clean` and `make -j 8` again.
 * If above is not enough, try `make cleanall` and `make -j 8` again.
+* In extreme cases, you may wish to reset the source tree to a pristine state. The following git commands may be helpful:
+```Shell
+git reset --hard #Forcibly remove any changes to any files under version control
+git clean -x -f -d #Forcibly remove any file or directory not under version control
+```
 
 ### 2-3) [Updating an existing source tree](https://github.com/JuliaLang/julia/blob/master/README.md#updating-an-existing-source-tree) (when you want to update Julia)
 ```Shell
