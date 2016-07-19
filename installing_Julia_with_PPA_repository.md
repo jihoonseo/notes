@@ -20,19 +20,20 @@ https://github.com/JuliaLang/julia/blob/master/README.md
 ## Steps
 
 ### 1) Install "[Required Build Tools and External Libraries](https://github.com/JuliaLang/julia/blob/master/README.md#required-build-tools-and-external-libraries)"
-```
-# apt-get update
-# apt-get install vim build-essential gfortran perl wget curl m4 patch cmake openssl \
+```Shell
+#
+apt-get update
+apt-get install vim build-essential gfortran perl wget curl m4 patch cmake openssl \
 libopenblas-dev libopenblas-base git
 ```
 
 ### 2) [Add PPA repository and install Julia](http://julialang.org/downloads/platform.html)
 ```Shell
-$
-sudo add-apt-repository ppa:staticfloat/juliareleases
-sudo add-apt-repository ppa:staticfloat/julia-deps
-sudo apt-get update
-sudo apt-get install julia
+#
+add-apt-repository ppa:staticfloat/juliareleases
+add-apt-repository ppa:staticfloat/julia-deps
+apt-get update
+apt-get install julia
 ```
 
 ### 3) [Install `ParallelAccelerator.jl` package in Julia](http://parallelacceleratorjl.readthedocs.io/en/latest/install.html)
