@@ -68,6 +68,7 @@ git clean -x -f -d #Forcibly remove any file or directory not under version cont
 At the `julia>` prompt, run these commands:
 ```Julia
 Pkg.add("ParallelAccelerator")          # Install this package and its dependencies.
+
 Pkg.checkout("ParallelAccelerator")     # Switch to master branch
 Pkg.checkout("CompilerTools")           # Switch to master branch
 Pkg.build("ParallelAccelerator")        # Build the C++ runtime component of the package.
