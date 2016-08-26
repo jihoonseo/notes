@@ -62,6 +62,10 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/e
 export CUDA_HOME=/usr/local/cuda
 ```
 
+* Reboot your computer
+
+`# sync;sync;reboot`
+
 ### Run TensorFlow from the Command Line
 ```Python
 >>> import tensorflow as tf
