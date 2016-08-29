@@ -29,12 +29,23 @@ https://developer.nvidia.com/cudnn
 https://www.tensorflow.org/versions/r0.10/get_started/os_setup.html#optional-install-cuda-gpus-on-linux
 
 1. `tar xvzf cudnn-7.5-linux-x64-v4.tgz`
-
 2. `sudo cp cuda/include/cudnn.h /usr/local/cuda/include`
-
 3. `sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64`
-
 4. `sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*`
+
+### (Linux) Enable GPU Support
+
+https://www.tensorflow.org/versions/r0.10/get_started/os_setup.html#optional-linux-enable-gpu-support
+
+* Append these lines to your `.bashrc` (e.g. `/home/jhseo/.bashrc`)
+```Shell
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
+export CUDA_HOME=/usr/local/cuda
+```
+
+* Reboot your computer
+
+`# sync;sync;reboot`
 
 ## Install TensorFlow (Pip Installation)
 `sudo apt-get install python-pip python-dev`
@@ -52,19 +63,7 @@ $ sudo pip install --upgrade $TF_BINARY_URL
 
 ## Test the TensorFlow installation
 
-### (Optional, Linux) Enable GPU Support
 
-https://www.tensorflow.org/versions/r0.10/get_started/os_setup.html#optional-linux-enable-gpu-support
-
-* Append these lines to your `.bashrc` (e.g. `/home/jhseo/.bashrc`)
-```Shell
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
-export CUDA_HOME=/usr/local/cuda
-```
-
-* Reboot your computer
-
-`# sync;sync;reboot`
 
 ### Run TensorFlow from the Command Line
 ```Python
