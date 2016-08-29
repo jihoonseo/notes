@@ -41,6 +41,7 @@ https://www.tensorflow.org/versions/r0.10/get_started/os_setup.html#optional-lin
 ```Shell
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
 export CUDA_HOME=/usr/local/cuda
+export CUDA_ROOT=/usr/local/cuda
 ```
 
 * Reboot your computer
