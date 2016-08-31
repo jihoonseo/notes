@@ -124,3 +124,8 @@ $ THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python check1.py
 
 ### Test GPU configuration
 `THEANO_FLAGS=floatX=float32,device=gpu python /usr/local/lib/python2.7/dist-packages/theano/misc/check_blas.py`
+
+### Using multiple GPUs
+http://deeplearning.net/software/theano/tutorial/using_multi_gpu.html
+http://deeplearning.net/software/theano/tutorial/using_gpu.html#gpuarray
+http://deeplearning.net/software/libgpuarray/installation.html
