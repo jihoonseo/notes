@@ -21,8 +21,15 @@ http://deeplearning.net/software/theano/install_ubuntu.html#install-ubuntu
 http://deeplearning.net/software/theano/install_ubuntu.html#install-ubuntu
 ```Shell
 sudo apt-get install python-numpy python-scipy python-dev python-pip python-nose g++ libopenblas-dev git
-sudo pip install Theano
 ```
+
+### Install the development version of Theano
+http://deeplearning.net/software/theano_versions/dev/install_ubuntu.html
+
+* Install Miniconda
+http://conda.pydata.org/miniconda.html
+
+* `conda install numpy scipy mkl <nose> <sphinx> <pydot-ng>`
 
 ### Install python packages
 ```Shell
@@ -129,3 +136,26 @@ $ THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python check1.py
 http://deeplearning.net/software/theano/tutorial/using_multi_gpu.html
 http://deeplearning.net/software/theano/tutorial/using_gpu.html#gpuarray
 http://deeplearning.net/software/libgpuarray/installation.html
+
+```Shell
+# Run below as root
+git clone https://github.com/Theano/libgpuarray.git
+cd libgpuarray
+
+# For libgpuarray:
+mkdir Build
+cd Build
+# you can pass -DCMAKE_INSTALL_PREFIX=/path/to/somewhere to install to an alternate location
+cmake .. -DCMAKE_BUILD_TYPE=Release # or Debug if you are investigating a crash
+make
+make install
+cd ..
+
+# For pygpu:
+# This must be done after libgpuarray is installed as per instructions above.
+python setup.py build
+python setup.py install
+
+ldconfig
+sync;sync;reboot
+```
